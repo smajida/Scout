@@ -8,7 +8,7 @@
 #include "Tracker.h"
 #include "ARDriver.h"
 #include "MapViewer.h"
-#include "Brain.h"i
+#include "Brain.h"
 #include <iostream>
 
 using namespace CVD;
@@ -95,6 +95,12 @@ void System::Run()
 	mpMapViewer->DrawMap(mpTracker->GetCurrentPose());
       else if(bDrawAR)
 	mpARDriver->Render(mimFrameRGB, mpTracker->GetCurrentPose());
+
+      // Pass latest position to Brain
+      SE3<> se3CamFromWorld = mpTracker->GetCurrentPose();
+      Vector<3> position = se3CamFromWorld.inverse().get_translation();       
+      mpBrain->setPosition(position[0], position[1], position[2]);
+      
 
       //      mGLWindow.GetMousePoseUpdate();
       string sCaption;

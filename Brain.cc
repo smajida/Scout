@@ -18,6 +18,13 @@ Brain::~Brain()
   delete sender;
 }
 
+void Brain::setPosition(float x, float y, float z)
+{
+  mPos_x = x;
+  mPos_y = y;
+  mPos_z = z; 
+}
+
 void Brain::run()
 {
   sender->initialize("192.168.1.1", 5556);
@@ -28,6 +35,9 @@ void Brain::run()
   int i = 0;  
   while(!shouldStop())
   {
+
+     cout << mPos_x << "," << mPos_y << "," << mPos_z << endl;
+
      i++;
      Drone_Msg *msg;   
      msg = new Drone_Hold_Msg();
