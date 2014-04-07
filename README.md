@@ -6,4 +6,4 @@ This is a autonomous vision and navigation system for Drones.
 It is based on PTAM:
 Parallel Tracking and Mapping for Small AR Workspaces from Oxford University
 
-![My image](tyleeer.github.com/Scout/Flow.jpg)
+![Flow](https://github.com/tyleeer/Scout/Flow.jpg)
