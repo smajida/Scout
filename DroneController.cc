@@ -73,7 +73,7 @@ void Msg_Sender::send_msg(Drone_Msg* message){
 	memset(buf, '0',sizeof(buf));
 	//process msg
     sprintf(buf, msg);
-	printf("Sending msg: %s\n",buf);
+	//printf("Sending msg: %s\n",buf);
     if (sendto(sockfd, buf, BUFLEN, 0,(struct sockaddr *) &serv_addr, slen)==-1){
         diep("sendto()");
         

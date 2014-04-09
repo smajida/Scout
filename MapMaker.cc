@@ -73,7 +73,6 @@ void MapMaker::run()
   while(!shouldStop())  // ShouldStop is a CVD::Thread func which return true if the thread is told to exit.
     {
       
-      cout << "MapMaker Thread running, refine the map. " << endl;
 
       CHECK_RESET;
       sleep(5); // Sleep not really necessary, especially if mapmaker is busy

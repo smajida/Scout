@@ -46,7 +46,7 @@ void* drainFrames(void *arg){
      Mat temp;
      VideoCapture *cap = (VideoCapture *)arg;
      while (true) { 
-        cout << "Drain a frame" << endl;   
+        //cout << "Drain a frame" << endl;   
         *cap >> temp;
         pthread_mutex_lock(&mutex);
         latestFrame = temp.clone();

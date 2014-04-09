@@ -8,8 +8,8 @@ COMPILEFLAGS = -I MY_CUSTOM_INCLUDE_PATH -D_LINUX -D_REENTRANT -Wall  -O3 -march
 LINKFLAGS = -L MY_CUSTOM_LINK_PATH -L /usr/local/lib -lGVars3 -lcvd -lGLU -lGL -I /usr/include/ -llapack `pkg-config --libs opencv` -lpthread
 
 # Edit this line to change video source
-VIDEOSOURCE = VideoSource_Linux_OpenCV.o
-#VIDEOSOURCE = VideoSource_Linux_Parallel.o
+#VIDEOSOURCE = VideoSource_Linux_OpenCV.o
+VIDEOSOURCE = VideoSource_Linux_Parallel.o
 
 OBJECTS=	main.o\
 		GLWindow2.o\
